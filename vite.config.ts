@@ -1,3 +1,4 @@
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -11,8 +12,12 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
+    // Only apply the component tagger in development mode
     mode === 'development' &&
-    componentTagger(),
+    componentTagger({
+      // Disable the watermark
+      watermark: false
+    }),
   ].filter(Boolean),
   resolve: {
     alias: {
