@@ -1,7 +1,8 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Calculator, BookOpen, Users, Award } from "lucide-react";
+import { Calculator, BookOpen, Users, Award, Download } from "lucide-react";
+import { DownloadButton } from "@/components/DownloadButton";
 
 const Index = () => {
   return (
@@ -42,6 +43,11 @@ const Index = () => {
                     Sign Up
                   </Button>
                 </Link>
+              </div>
+              
+              {/* Download Button */}
+              <div className="flex justify-center md:justify-start animate-slide-up" style={{ animationDelay: "300ms" }}>
+                <DownloadButton />
               </div>
             </div>
             
