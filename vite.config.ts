@@ -14,10 +14,7 @@ export default defineConfig(({ mode }) => ({
     react(),
     // Only apply the component tagger in development mode
     mode === 'development' &&
-    componentTagger({
-      // Disable the watermark
-      watermark: false
-    }),
+    componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
